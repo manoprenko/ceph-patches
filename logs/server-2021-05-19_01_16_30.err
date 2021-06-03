@@ -1,0 +1,11 @@
+Cannot connect to server directory at [/home/michael/my_ceph/ceph]: /home/michael/my_ceph/ceph/version (No such file or directory). See error log for more details.
+Cannot connect to server directory at [/home/michael/my_ceph/ceph]: /home/michael/my_ceph/ceph/version (No such file or directory)
+ru.isp.svace.projectdir.api.SvaceAPIException: Cannot connect to server directory at [/home/michael/my_ceph/ceph]: /home/michael/my_ceph/ceph/version (No such file or directory)
+	at ru.isp.svace.projectdir.network.newserver.Management.<init>(Management.java:178)
+	at ru.isp.svace.projectdir.network.newserver.Management.<init>(Management.java:94)
+	at ru.isp.svace.projectdir.network.newserver.Management.<init>(Management.java:89)
+	at ru.isp.svace.projectdir.network.SvaceServerStart.entryPoint(SvaceServerStart.java:82)
+	at ru.isp.svace.projectdir.network.SvaceServerStart$1.exceptionMain(SvaceServerStart.java:28)
+	at ru.isp.svace.cmdline.MainFunctionTemplate.exceptionMainWithCode(MainFunctionTemplate.java:77)
+	at ru.isp.svace.cmdline.MainFunctionTemplate.mainTemplate(MainFunctionTemplate.java:21)
+	at ru.isp.svace.projectdir.network.SvaceServerStart.main(SvaceServerStart.java:31)

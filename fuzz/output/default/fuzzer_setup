@@ -1,0 +1,4 @@
+# environment variables:
+AFL_KILL_SIGNAL=9
+# command line:
+'afl-fuzz' '-i' 'fuzz/input/input1' '-o' 'fuzz/output' '--' 'build/bin/crushtool'
