@@ -16366,6 +16366,12 @@ accept_new_connection(const struct socket *listener, struct mg_context *ctx)
 			}
 		}
 
+		if (ctx == NULL) {
+			mg_cry(fc(ctx),
+						 "%s: unable to produce socket without mg_context",
+						 __func__);
+		}
+
 		/* We are using non-blocking sockets. Thus, the
 		 * set_sock_timeout(so.sock, timeout);
 		 * call is no longer required. */
