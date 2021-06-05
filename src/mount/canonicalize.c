@@ -38,7 +38,6 @@ myrealpath(const char *path, char *resolved_path, int maxreslth) {
 	char *npath;
 	char *link_path;
 	int n;
-	char *buf = NULL;
 
 	npath = resolved_path;
 
@@ -122,8 +121,7 @@ myrealpath(const char *path, char *resolved_path, int maxreslth) {
 				goto err;
 			memcpy(newbuf, link_path, n);
 			memcpy(newbuf + n, path, m + 1);
-			free(buf);
-			path = buf = newbuf;
+			path = newbuf;
 		}
 		*npath++ = '/';
 	}
@@ -134,12 +132,10 @@ myrealpath(const char *path, char *resolved_path, int maxreslth) {
 	*npath = '\0';
 
 	free(link_path);
-	free(buf);
 	return resolved_path;
 
  err:
 	free(link_path);
-	free(buf);
 	return NULL;
 }
 
